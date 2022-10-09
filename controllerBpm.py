@@ -275,9 +275,9 @@ class BpmController():
         if self.t.is_alive():
             self.t.join()
 
-# if __name__ == '__main__': # for testing this file individually
+# if __name__ == '__main__': # for running this file
 #     bpmController = BpmController()
-#     bpmController.setMAC("28:ff:b2:2c:b9:af")
+#     bpmController.setMAC("BPM-mac-address")
 #     bpmController.setQueue(queue.Queue())
 #     bpmController.start()
 
@@ -285,23 +285,3 @@ class BpmController():
 # bpmController.setMAC("28:ff:b2:2c:b9:af")
 # bpmController.setQueue(queue.Queue())
 # bpmController.start()
-
-# TAKE NOTE OF THIS!!! - maybe consider it if threading still causing issues
-# possible change to controller: 
-# maybe keep the subscribing-to-indication part in another file, 
-# and let the controller make reference to that file to keep everything in the same function
-
-
-    # can consider some kinda "flag" coding:
-    # set and manipulate some variables, use if statements to call the necessary loop functions and all that
-    # can also try using the try except commands to wrap the calling of functions so that it's not always called?
-
-    # maybe create another layer of function that calls the functions below that are needed to get the data (psuedo code by ding hao below)
-    # def bpm_main(self):
-
-        #check bluetooth state
-        # check state
-        # if not connected:
-            # findbpm
-            # while true ==
-        # if connect
